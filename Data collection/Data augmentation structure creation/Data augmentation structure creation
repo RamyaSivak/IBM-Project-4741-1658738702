@@ -1,1 +1,324 @@
-
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "collapsed_sections": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "qslhx0ndgxus"
+      },
+      "outputs": [],
+      "source": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from google.colab import drive\n",
+        "drive.mount('/content/drive')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "17hgxak1hb2b",
+        "outputid": "55454ad9-6dfd-41f4-8bfb-f79ea6839134"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "mounted at /content/drive\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!unzip \"/content/drive/mydrive/digital naturalist dataset.zip\""
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ugseup2chrud",
+        "outputid": "189462b9-a057-4678-ccb4-6e1f6f130b7a"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "archive:  /content/drive/mydrive/digital naturalist dataset.zip\n",
+            "   creating: digital naturalist dataset/\n",
+            "   creating: digital naturalist dataset/bird/\n",
+            "   creating: digital naturalist dataset/bird/great indian bustard bird/\n",
+            "  inflating: digital naturalist dataset/bird/great indian bustard bird/download (1).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/great indian bustard bird/download (10).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/great indian bustard bird/download (11).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/great indian bustard bird/download (2).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/great indian bustard bird/download (3).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/great indian bustard bird/download (4).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/great indian bustard bird/download (5).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/great indian bustard bird/download (6).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/great indian bustard bird/download (7).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/great indian bustard bird/download (8).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/great indian bustard bird/download (9).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/great indian bustard bird/download.jpg  \n",
+            " extracting: digital naturalist dataset/bird/great indian bustard bird/greatindianbustard-krdc--621x414@livemint.webp  \n",
+            "  inflating: digital naturalist dataset/bird/great indian bustard bird/images (1).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/great indian bustard bird/images (2).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/great indian bustard bird/images (3).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/great indian bustard bird/images (4).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/great indian bustard bird/images (5).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/great indian bustard bird/images (6).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/great indian bustard bird/images (7).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/great indian bustard bird/images (8).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/great indian bustard bird/images.jpg  \n",
+            "   creating: digital naturalist dataset/bird/spoon billed sandpiper bird/\n",
+            "  inflating: digital naturalist dataset/bird/spoon billed sandpiper bird/download (1).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/spoon billed sandpiper bird/download (12).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/spoon billed sandpiper bird/download (2).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/spoon billed sandpiper bird/download (3).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/spoon billed sandpiper bird/download (4).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/spoon billed sandpiper bird/download (5).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/spoon billed sandpiper bird/download (6).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/spoon billed sandpiper bird/download (7).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/spoon billed sandpiper bird/download.jpg  \n",
+            "  inflating: digital naturalist dataset/bird/spoon billed sandpiper bird/images (1).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/spoon billed sandpiper bird/images (10).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/spoon billed sandpiper bird/images (11).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/spoon billed sandpiper bird/images (2).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/spoon billed sandpiper bird/images (3).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/spoon billed sandpiper bird/images (4).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/spoon billed sandpiper bird/images (5).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/spoon billed sandpiper bird/images (6).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/spoon billed sandpiper bird/images (7).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/spoon billed sandpiper bird/images (8).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/spoon billed sandpiper bird/images (9).jpg  \n",
+            "  inflating: digital naturalist dataset/bird/spoon billed sandpiper bird/images.jpg  \n",
+            "   creating: digital naturalist dataset/flower/\n",
+            "   creating: digital naturalist dataset/flower/corpse flower/\n",
+            "  inflating: digital naturalist dataset/flower/corpse flower/download (1).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/corpse flower/download (11).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/corpse flower/download (2).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/corpse flower/download (3).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/corpse flower/download (4).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/corpse flower/download (5).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/corpse flower/download.jpg  \n",
+            "  inflating: digital naturalist dataset/flower/corpse flower/images (1).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/corpse flower/images (10).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/corpse flower/images (11).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/corpse flower/images (12).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/corpse flower/images (13).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/corpse flower/images (14).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/corpse flower/images (15).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/corpse flower/images (16).jpg  \n",
+            " extracting: digital naturalist dataset/flower/corpse flower/images (17).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/corpse flower/images (2).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/corpse flower/images (3).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/corpse flower/images (4).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/corpse flower/images (5).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/corpse flower/images (6).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/corpse flower/images (7).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/corpse flower/images (8).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/corpse flower/images (9).jpg  \n",
+            " extracting: digital naturalist dataset/flower/corpse flower/images.jpg  \n",
+            "   creating: digital naturalist dataset/flower/lady slipper orchid flower/\n",
+            "  inflating: digital naturalist dataset/flower/lady slipper orchid flower/download (1).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/lady slipper orchid flower/download (10).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/lady slipper orchid flower/download (2).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/lady slipper orchid flower/download (3).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/lady slipper orchid flower/download (4).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/lady slipper orchid flower/download (5).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/lady slipper orchid flower/download (6).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/lady slipper orchid flower/download (7).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/lady slipper orchid flower/download (8).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/lady slipper orchid flower/download (9).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/lady slipper orchid flower/download.jpg  \n",
+            "  inflating: digital naturalist dataset/flower/lady slipper orchid flower/images (1).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/lady slipper orchid flower/images (10).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/lady slipper orchid flower/images (11).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/lady slipper orchid flower/images (12).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/lady slipper orchid flower/images (2).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/lady slipper orchid flower/images (3).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/lady slipper orchid flower/images (4).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/lady slipper orchid flower/images (5).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/lady slipper orchid flower/images (6).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/lady slipper orchid flower/images (7).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/lady slipper orchid flower/images (8).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/lady slipper orchid flower/images (9).jpg  \n",
+            "  inflating: digital naturalist dataset/flower/lady slipper orchid flower/images.jpg  \n",
+            "   creating: digital naturalist dataset/mammal/\n",
+            "   creating: digital naturalist dataset/mammal/pangolin mammal/\n",
+            "  inflating: digital naturalist dataset/mammal/pangolin mammal/download (1).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/pangolin mammal/download (2).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/pangolin mammal/download (3).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/pangolin mammal/download (4).jpg  \n",
+            " extracting: digital naturalist dataset/mammal/pangolin mammal/download (5).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/pangolin mammal/download (6).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/pangolin mammal/download (8).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/pangolin mammal/download.jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/pangolin mammal/images (1).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/pangolin mammal/images (10).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/pangolin mammal/images (11).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/pangolin mammal/images (12).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/pangolin mammal/images (13).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/pangolin mammal/images (14).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/pangolin mammal/images (15).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/pangolin mammal/images (16).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/pangolin mammal/images (2).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/pangolin mammal/images (3).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/pangolin mammal/images (4).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/pangolin mammal/images (5).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/pangolin mammal/images (6).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/pangolin mammal/images (7).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/pangolin mammal/images (8).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/pangolin mammal/images (9).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/pangolin mammal/images.jpg  \n",
+            "   creating: digital naturalist dataset/mammal/senenca white deer mammal/\n",
+            "  inflating: digital naturalist dataset/mammal/senenca white deer mammal/download (1).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/senenca white deer mammal/download (2).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/senenca white deer mammal/download (3).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/senenca white deer mammal/download (7).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/senenca white deer mammal/download.jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/senenca white deer mammal/images (1).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/senenca white deer mammal/images (10).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/senenca white deer mammal/images (11).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/senenca white deer mammal/images (12).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/senenca white deer mammal/images (13).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/senenca white deer mammal/images (14).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/senenca white deer mammal/images (15).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/senenca white deer mammal/images (16).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/senenca white deer mammal/images (2).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/senenca white deer mammal/images (3).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/senenca white deer mammal/images (4).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/senenca white deer mammal/images (5).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/senenca white deer mammal/images (6).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/senenca white deer mammal/images (7).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/senenca white deer mammal/images (8).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/senenca white deer mammal/images (9).jpg  \n",
+            "  inflating: digital naturalist dataset/mammal/senenca white deer mammal/images.jpg  \n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# importing required libraries"
+      ],
+      "metadata": {
+        "id": "tcw4xngbhgxy"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "from keras.preprocessing.image import imagedatagenerator\n",
+        "import cv2\n",
+        "from os import listdir\n",
+        "import time "
+      ],
+      "metadata": {
+        "id": "dlwbdkpph6l2"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# data augment function"
+      ],
+      "metadata": {
+        "id": "uoit4nq2il3x"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def augment_data(file_dir, n_generated_samples,save_to_dir):\n",
+        "  data_gen = imagedatagenerator(rotation_range=30,\n",
+        "                                width_shift_range=0.1,\n",
+        "                                height_shift_range=0.15,\n",
+        "                                shear_range=0.25,\n",
+        "                                zoom_range=0.2,\n",
+        "                                horizontal_flip=true,\n",
+        "                                vertical_flip=false,\n",
+        "                                fill_mode='nearest',\n",
+        "                                brightness_range=(0.5,1.2)\n",
+        "                                )\n",
+        "  for filename in listdir (file_dir):\n",
+        "    image = cv2.imread(file_dir + '/' + filename)\n",
+        "    image = cv2.cvtcolor(image,cv2.color_bgr2rgb)\n",
+        "    image = image.reshape((1,)+image.shape)\n",
+        "    save_prefix = 'aug_' + filename [:-4]\n",
+        "    i=0\n",
+        "    for batch in data_gen.flow(x=image,batch_size=1, save_to_dir=save_to_dir,\n",
+        "                               save_prefix=save_prefix, save_format='jpg'):\n",
+        "      i += 1\n",
+        "      if i > n_generated_samples:\n",
+        "        break"
+      ],
+      "metadata": {
+        "id": "n2ikd5uaiq7q"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "\"augmented_data_path  ='c:\\augmented data'\"\n",
+        "\"augment_data(file_dir='c:\\augmented data\\digital naturalist\\birds\\great indian bustard birds', n_generated_samples=20, save_to_dir=augmented_data_path+'/gib_aug')\\n\",\n",
+        "\"augment_data(file_dir='c:\\augmented data\\digital naturalist\\birds\\spoon billed sadipiper birds', n_generated_samples=20, save_to_dir= augmented_data_path+'/sps_aug')\\n\",\n",
+        "\"augment_data(file_dir='c:\\augmented data\\digital naturalist\\flowers\\corpse flower,' n_generated_samples=20, save_to_dir=augmented_data_path+'/corpse_aug')\\n\",\n",
+        "\"augment_data(file_dir='c:\\augmented data\\digital naturalist\\flowers\\lady slipper orchid flower,' n_generated_samples=20, save_to_dir=augmented_data_path='/ls_orchid_aug')\\n\",\n",
+        "\"augment_data(file_dir='c:\\augmented data\\digital naturalist\\mammals\\pangolin mammal' n_generated_samples=20, save_to_dir=augmented_data_path+'/ls_pangolin_aug')\\n\",\n",
+        "\"augment_data(file_dir='c:\\augmented data\\digital naturalist\\mammals\\seneca white deer mammal', n_generated_samples=20, save_to_dir=augmented_data_path+'/sw_deer_aug')\""
+      ],
+      "metadata": {
+        "id": "qiywkrssk-uj",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 53
+        },
+        "outputid": "ebcf03c7-eb08-4ac2-f7b6-b8d3b0cc28d3"
+      },
+      "execution_count": 2,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "\"augment_data(file_dir='c:\\\\augmented data\\\\digital naturalist\\\\mammals\\\\seneca white deer mammal', n_generated_samples=20, save_to_dir=augmented_data_path+'/sw_deer_aug')\""
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 2
+        }
+      ]
+    }
+  ]
+}
